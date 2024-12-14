@@ -1,6 +1,6 @@
 # CPSC 183 Final Project
 
-## Noah Dee, Lauren Lee, Grady Yu
+Noah Dee, Lauren Lee, Grady Yu
 
 ## Setup
 
