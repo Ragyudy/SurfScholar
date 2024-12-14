@@ -56,7 +56,7 @@ def generate_voiceover(text):
       return temp_file.name
 
 def modify_video(video_file, data):
-    text_chunks = format_chunks(data, chunk_size=5)
+    text_chunks = format_chunks(data, chunk_size=4)
     formatted_chunks = [format_lines(chunk, line_length=2) for chunk in text_chunks]
     video = VideoFileClip(video_file)
 
@@ -68,11 +68,11 @@ def modify_video(video_file, data):
 
     text_clips = []
     for i, chunk in enumerate(formatted_chunks):
-        shadow = TextClip(text=chunk, font_size=30, color='black', font="Arial") \
+        shadow = TextClip(text=chunk, font_size=30, color='black', font="Helvetica") \
             .with_duration(duration) \
             .with_position(('center', 'center'))
 
-        txt_clip = TextClip(text=chunk, font_size=30, color='white', font="Arial") \
+        txt_clip = TextClip(text=chunk, font_size=30, color='white', font="Helvetica") \
             .with_duration(duration) \
             .with_position(('center', 'center'))
 
@@ -86,7 +86,6 @@ def modify_video(video_file, data):
     final_clip = final_clip.with_audio(voiceover)
     final_clip.write_videofile("output_video_with_voice.mp4", fps=video.fps)
 
-    os.remove
     os.remove(voiceover_file)
 
 def speed_up_video(input_file, output_file, speed_factor):

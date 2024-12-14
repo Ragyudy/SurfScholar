@@ -4,9 +4,9 @@
 
 ## Setup
 
-0. Install python
-1. Clone this repository
-2. Setup venv:
+0. Install python - https://www.python.org/downloads/
+1. Clone this repository to your local computer (git clone git@github.com:Ragyudy/SurfScholar.git)
+2. Setup a virtual environment and install dependencies:
    1. `python -m venv .venv`
    2. `source .venv/bin/activate`
    3. `pip install -r requirements.txt`
